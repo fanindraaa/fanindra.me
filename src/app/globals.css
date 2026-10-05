@@ -1,0 +1,178 @@
+@import "tailwindcss";
+@import "../styles/tokens.css";
+
+@font-face {
+  font-family: 'Timeless Sans';
+  src: url('/fonts/TimelessSans-SansMedium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Timeless Sans';
+  src: url('/fonts/TimelessSans-SansMediumItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Timeless Sans';
+  src: url('/fonts/TimelessSans-SansSemibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Timeless Sans';
+  src: url('/fonts/TimelessSans-SansSemiboldItalic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-surface: var(--surface);
+  --font-sans: var(--font-timeless-sans), 'Timeless Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+  font-size: 16px;
+  letter-spacing: -0.015em;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-timeless-sans), 'Timeless Sans', -apple-system, sans-serif;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-timeless-sans), 'Timeless Sans', -apple-system, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: var(--leading-body);
+  overflow-x: hidden;
+}
+
+.font-sans {
+  font-family: var(--font-timeless-sans), 'Timeless Sans', -apple-system, sans-serif;
+}
+
+/* Typography constraints: Only medium (500) and semibold (600) weights */
+h1, h2, h3, h4, h5, h6, strong, b {
+  font-weight: 600;
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+  font-weight: 500;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--font-timeless-sans), 'Timeless Sans', -apple-system, sans-serif;
+  font-weight: 500;
+}
+
+*::selection,
+::selection {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+*::-moz-selection,
+::-moz-selection {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Editorial subtle scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(23, 23, 20, 0.15);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(23, 23, 20, 0.25);
+}
+
+/* Hide scrollbar utility */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Accessible focus outlines */
+:focus-visible {
+  outline: 1px solid var(--foreground);
+  outline-offset: 3px;
+}
+
+/* ========================================================
+   Responsive Portfolio Grid Viewport Visibility
+   - Mobile: < 768px
+   - Tablet & Narrow Desktop: 768px - 1399px
+   - Wide Desktop: >= 1400px
+   Mutually exclusive media queries guarantee exactly ONE view renders at any width.
+   ======================================================== */
+@media (max-width: 767px) {
+  .portfolio-mobile-view {
+    display: flex !important;
+  }
+  .portfolio-tablet-view {
+    display: none !important;
+  }
+  .portfolio-desktop-view {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1399px) {
+  .portfolio-mobile-view {
+    display: none !important;
+  }
+  .portfolio-tablet-view {
+    display: grid !important;
+  }
+  .portfolio-desktop-view {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .portfolio-mobile-view {
+    display: none !important;
+  }
+  .portfolio-tablet-view {
+    display: none !important;
+  }
+  .portfolio-desktop-view {
+    display: grid !important;
+  }
+}

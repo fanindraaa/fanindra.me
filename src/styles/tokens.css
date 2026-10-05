@@ -1,0 +1,13 @@
+:root {
+  /* Warm off-white / paper background palette */
+  --background: #FAFAFA;         /* Refined warm paper background */
+  --surface: #ECE7DE;            /* Slightly deeper paper surface */
+  --muted: #6E6A63;              /* Editorial muted ink */
+  --border: rgba(0, 0, 0, 0.1); /* Subtle hairline architectural grid border */
+  --accent: #111111;             /* Pure dense ink black */
+  --foreground: #111111;         /* Deepest ink black */
+
+  --font-base-size: 1rem;
+  --leading-body: 1.5;
+  --leading-heading: 1.15;
+}
