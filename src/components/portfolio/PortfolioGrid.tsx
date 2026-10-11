@@ -36,7 +36,7 @@ export function PortfolioGrid() {
     return [
       currentWork,
       previousWork,
-      academicProjects.find((p) => p.id === 'uber-dynamic-carpooling')!,
+      personalProjects.find((p) => p.id === 'food-atlas')!,
       academicProjects.find((p) => p.id === 'x-perception')!,
       personalProjects.find((p) => p.id === 'my-tags')!,
       personalProjects.find((p) => p.id === 'procedural-audio')!,
@@ -183,11 +183,7 @@ export function PortfolioGrid() {
           {mobileProjects.map((proj, idx) => (
             <div
               key={proj.id}
-              className={`w-full relative overflow-hidden shrink-0 ${
-                proj.id === 'uber-dynamic-carpooling'
-                  ? 'aspect-[4/3] sm:aspect-[4/3] min-h-[260px] max-h-[500px]'
-                  : 'aspect-[16/10] sm:aspect-[16/9] min-h-[220px] max-h-[440px]'
-              }`}
+              className="w-full relative overflow-hidden shrink-0 aspect-[16/10] sm:aspect-[16/9] min-h-[220px] max-h-[440px]"
             >
               <ProjectTile project={proj} priority={idx === 0} />
             </div>

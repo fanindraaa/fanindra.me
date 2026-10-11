@@ -54,28 +54,28 @@ export const currentWork: Project = {
     {
       type: 'image',
       src: '/images/hopr/Hopr-1.webp',
-      alt: 'Hopr mobile carpooling interface showing Bengaluru route matching and co-rider verification',
+      alt: 'At Rapido, I’ve started as an intern and now an Associate Product Designer. My work includes designing Hopr (Rapido’s carpooling product), while exploring how trust, behavioral design, and user needs can shape adoption in an emerging shared-mobility category',
       caption: 'At Rapido, I’ve started as an intern and now an Associate Product Designer. My work includes designing Hopr (Rapido’s carpooling product), while exploring how trust, behavioral design, and user needs can shape adoption in an emerging shared-mobility category',
       aspectRatio: '16/9',
     },
     {
       type: 'image',
       src: '/images/hopr/Hopr-2.webp',
-      alt: 'Hopr mobile ride sharing flow, driver and passenger interaction screens',
+      alt: 'At Rapido, I’ve started as an intern and now an Associate Product Designer. My work includes designing Hopr (Rapido’s carpooling product), while exploring how trust, behavioral design, and user needs can shape adoption in an emerging shared-mobility category',
       caption: 'At Rapido, I’ve started as an intern and now an Associate Product Designer. My work includes designing Hopr (Rapido’s carpooling product), while exploring how trust, behavioral design, and user needs can shape adoption in an emerging shared-mobility category',
       aspectRatio: '4/5',
     },
     {
       type: 'image',
       src: '/images/hopr/Hopr-3.webp',
-      alt: 'Hopr commute dashboard and trust-building social proof features',
+      alt: 'At Rapido, I’ve started as an intern and now an Associate Product Designer. My work includes designing Hopr (Rapido’s carpooling product), while exploring how trust, behavioral design, and user needs can shape adoption in an emerging shared-mobility category',
       caption: 'At Rapido, I’ve started as an intern and now an Associate Product Designer. My work includes designing Hopr (Rapido’s carpooling product), while exploring how trust, behavioral design, and user needs can shape adoption in an emerging shared-mobility category',
       aspectRatio: '16/9',
     },
     {
       type: 'image',
       src: '/images/hopr/home-progression.webp',
-      alt: 'Hopr home screen progression and commute state transitions',
+      alt: 'At Rapido, I’ve started as an intern and now an Associate Product Designer. My work includes designing Hopr (Rapido’s carpooling product), while exploring how trust, behavioral design, and user needs can shape adoption in an emerging shared-mobility category',
       caption: 'At Rapido, I’ve started as an intern and now an Associate Product Designer. My work includes designing Hopr (Rapido’s carpooling product), while exploring how trust, behavioral design, and user needs can shape adoption in an emerging shared-mobility category',
       aspectRatio: '1.43',
     },
@@ -101,42 +101,42 @@ export const previousWork: Project = {
     {
       type: 'image',
       src: '/images/cardtree/cardtree-1.webp',
-      alt: 'Cardtree physical NFC card paired with AI memory twin mobile interface',
+      alt: 'As one of the founding designers at Cardtree, I shaped the core product and AI Twin, shipping new experiences, and collaborating closely with developers to ensure high-quality implementation',
       caption: 'As one of the founding designers at Cardtree, I shaped the core product and AI Twin, shipping new experiences, and collaborating closely with developers to ensure high-quality implementation',
       aspectRatio: '16/9',
     },
     {
       type: 'image',
       src: '/images/cardtree/cardtree-2.webp',
-      alt: 'Cardtree mobile application dashboard and active twin status',
+      alt: 'As one of the founding designers at Cardtree, I shaped the core product and AI Twin, shipping new experiences, and collaborating closely with developers to ensure high-quality implementation',
       caption: 'As one of the founding designers at Cardtree, I shaped the core product and AI Twin, shipping new experiences, and collaborating closely with developers to ensure high-quality implementation',
       aspectRatio: '16/9',
     },
     {
       type: 'image',
       src: '/images/cardtree/cardtree-3.webp',
-      alt: 'Cardtree memory drawer and contextual card organization',
+      alt: 'As one of the founding designers at Cardtree, I shaped the core product and AI Twin, shipping new experiences, and collaborating closely with developers to ensure high-quality implementation',
       caption: 'As one of the founding designers at Cardtree, I shaped the core product and AI Twin, shipping new experiences, and collaborating closely with developers to ensure high-quality implementation',
       aspectRatio: '1.17',
     },
     {
       type: 'image',
       src: '/images/cardtree/cardtree-4.webp',
-      alt: 'Cardtree interactive memory timeline and event extraction',
+      alt: 'As one of the founding designers at Cardtree, I shaped the core product and AI Twin, shipping new experiences, and collaborating closely with developers to ensure high-quality implementation',
       caption: 'As one of the founding designers at Cardtree, I shaped the core product and AI Twin, shipping new experiences, and collaborating closely with developers to ensure high-quality implementation',
       aspectRatio: '16/9',
     },
     {
       type: 'image',
       src: '/images/cardtree/cardtree-5.webp',
-      alt: 'Cardtree design system and tactile visual language',
+      alt: 'As one of the founding designers at Cardtree, I shaped the core product and AI Twin, shipping new experiences, and collaborating closely with developers to ensure high-quality implementation',
       caption: 'As one of the founding designers at Cardtree, I shaped the core product and AI Twin, shipping new experiences, and collaborating closely with developers to ensure high-quality implementation',
       aspectRatio: '16/9',
     },
     {
       type: 'image',
       src: '/images/cardtree/cardtree-6.webp',
-      alt: 'Cardtree mobile interaction flow and developer handoff specs',
+      alt: 'As one of the founding designers at Cardtree, I shaped the core product and AI Twin, shipping new experiences, and collaborating closely with developers to ensure high-quality implementation',
       caption: 'As one of the founding designers at Cardtree, I shaped the core product and AI Twin, shipping new experiences, and collaborating closely with developers to ensure high-quality implementation',
       aspectRatio: '16/9',
     },
@@ -163,12 +163,16 @@ export const academicProjects: Project[] = [
       {
         type: 'image',
         src: '/images/x/x-1.webp',
-        alt: 'Understanding Perception of X Users UX research study and usability findings',
+        alt: 'Conducted a usability study on X’s feed and verification changes, uncovering reduced trust, increased cognitive load, and a strong user preference for the Trending and Following feeds',
         caption: 'Conducted a usability study on X’s feed and verification changes, uncovering reduced trust, increased cognitive load, and a strong user preference for the Trending and Following feeds',
         aspectRatio: '3/2',
       }
     ],
   },
+];
+
+// De-listed projects (assets preserved in public/images/uberpool/)
+export const delistedProjects: Project[] = [
   {
     id: 'uber-dynamic-carpooling',
     title: 'Uber Dynamic Ride-Share',
@@ -188,28 +192,28 @@ export const academicProjects: Project[] = [
       {
         type: 'image',
         src: '/images/uberpool/uberpool-1.webp',
-        alt: 'Uber Dynamic Ride-Share speculative route intervention hero view',
+        alt: 'A speculative intervention that lets solo rideshare passengers opt into shared route segments mid-ride in exchange for upfront, dynamic fare savings',
         caption: 'A speculative intervention that lets solo rideshare passengers opt into shared route segments mid-ride in exchange for upfront, dynamic fare savings',
         aspectRatio: '3/2',
       },
       {
         type: 'image',
         src: '/images/uberpool/uberpool-2.webp',
-        alt: 'Uber Dynamic Ride-Share opt-in prompts and dynamic fare rebate calculations',
+        alt: 'A speculative intervention that lets solo rideshare passengers opt into shared route segments mid-ride in exchange for upfront, dynamic fare savings',
         caption: 'A speculative intervention that lets solo rideshare passengers opt into shared route segments mid-ride in exchange for upfront, dynamic fare savings',
         aspectRatio: '4/3',
       },
       {
         type: 'image',
         src: '/images/uberpool/uberpool-3.webp',
-        alt: 'Uber Dynamic Ride-Share passenger matching and pickup synchronization',
+        alt: 'A speculative intervention that lets solo rideshare passengers opt into shared route segments mid-ride in exchange for upfront, dynamic fare savings',
         caption: 'A speculative intervention that lets solo rideshare passengers opt into shared route segments mid-ride in exchange for upfront, dynamic fare savings',
         aspectRatio: '4/3',
       },
       {
         type: 'image',
         src: '/images/uberpool/uberpool-4.webp',
-        alt: 'Uber Dynamic Ride-Share behavioral study and trip completion analytics',
+        alt: 'A speculative intervention that lets solo rideshare passengers opt into shared route segments mid-ride in exchange for upfront, dynamic fare savings',
         caption: 'A speculative intervention that lets solo rideshare passengers opt into shared route segments mid-ride in exchange for upfront, dynamic fare savings',
         aspectRatio: '4/3',
       },
@@ -218,6 +222,42 @@ export const academicProjects: Project[] = [
 ];
 
 export const personalProjects: Project[] = [
+  {
+    id: 'food-atlas',
+    title: 'The Food Atlas',
+    year: 'Oct 2026',
+    role: 'Personal Project',
+    category: 'personal',
+    description:
+      'The Food Atlas is an interactive exploration of how the Indian pantry evolved over thousands of years. It combines historical research, data visualization, tactile sound design, and interaction design to trace how ingredients travelled across the world and became part of Indian cuisine.',
+    links: [
+      { label: 'Try The Food Atlas ↗', url: 'https://food-atlas.vercel.app/' },
+    ],
+    actionLink: {
+      label: 'Try The Food Atlas',
+      url: 'https://food-atlas.vercel.app/',
+    },
+    media: [
+      {
+        type: 'image',
+        src: '/images/food-atlas/food-atlas.webp',
+        alt:
+          'The Food Atlas is an interactive exploration of how the Indian pantry evolved over thousands of years. It combines historical research, data visualization, tactile sound design, and interaction design to trace how ingredients travelled across the world and became part of Indian cuisine.',
+        caption:
+          'The Food Atlas is an interactive exploration of how the Indian pantry evolved over thousands of years. It combines historical research, data visualization, tactile sound design, and interaction design to trace how ingredients travelled across the world and became part of Indian cuisine.',
+        aspectRatio: '19/10',
+      },
+      {
+        type: 'video',
+        src: '/images/food-atlas/demo.mp4',
+        poster: '/images/food-atlas/demo-poster.webp',
+        alt: 'Demo video. Play with Sound ON',
+        caption:
+          'Demo video. Play with Sound ON',
+        aspectRatio: '16/10',
+      },
+    ],
+  },
   {
     id: 'my-tags',
     title: 'My Tags',
@@ -230,28 +270,28 @@ export const personalProjects: Project[] = [
       {
         type: 'image',
         src: '/images/mytags/mytags-1.webp',
-        alt: 'My Tags recovery architecture and encrypted token ecosystem',
+        alt: 'MyTags is a utility-focused mobile app that helps users tag, track, and recover personal items through QR codes, enabling finders to easily contact owners without revealing personal information',
         caption: 'MyTags is a utility-focused mobile app that helps users tag, track, and recover personal items through QR codes, enabling finders to easily contact owners without revealing personal information',
         aspectRatio: '3/2',
       },
       {
         type: 'image',
         src: '/images/mytags/mytags-2.webp',
-        alt: 'My Tags item registration and NFC/QR association workflow',
+        alt: 'MyTags is a utility-focused mobile app that helps users tag, track, and recover personal items through QR codes, enabling finders to easily contact owners without revealing personal information',
         caption: 'MyTags is a utility-focused mobile app that helps users tag, track, and recover personal items through QR codes, enabling finders to easily contact owners without revealing personal information',
         aspectRatio: '16/9',
       },
       {
         type: 'image',
         src: '/images/mytags/mytags-3.webp',
-        alt: 'My Tags finder interaction flow and anonymous messaging system',
+        alt: 'MyTags is a utility-focused mobile app that helps users tag, track, and recover personal items through QR codes, enabling finders to easily contact owners without revealing personal information',
         caption: 'MyTags is a utility-focused mobile app that helps users tag, track, and recover personal items through QR codes, enabling finders to easily contact owners without revealing personal information',
         aspectRatio: '16/9',
       },
       {
         type: 'image',
         src: '/images/mytags/mytags-4.webp',
-        alt: 'My Tags recovery notification and safe return coordination',
+        alt: 'MyTags is a utility-focused mobile app that helps users tag, track, and recover personal items through QR codes, enabling finders to easily contact owners without revealing personal information',
         caption: 'MyTags is a utility-focused mobile app that helps users tag, track, and recover personal items through QR codes, enabling finders to easily contact owners without revealing personal information',
         aspectRatio: '16/9',
       },

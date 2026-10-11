@@ -4,8 +4,48 @@ import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
-import { ChevronLeft, ChevronRight, X, ArrowUpRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X, ArrowUpRight, Play } from 'lucide-react';
 import { useLightbox } from './LightboxContext';
+
+function LightboxVideo({
+  src,
+  poster,
+}: {
+  src: string;
+  poster?: string;
+}) {
+  const videoRef = React.useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    // Explicitly set muted on DOM element for browser autoplay compliance
+    video.defaultMuted = true;
+    video.muted = true;
+
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // Autoplay may be restricted by browser policy; user can click play on controls
+      });
+    }
+  }, [src]);
+
+  return (
+    <video
+      ref={videoRef}
+      src={src}
+      poster={poster}
+      playsInline
+      muted
+      loop
+      autoPlay
+      controls
+      className="max-w-full max-h-full object-contain rounded-md shadow-2xl"
+    />
+  );
+}
 
 export function LightboxModal() {
   const {
@@ -178,15 +218,9 @@ export function LightboxModal() {
                       />
                     </div>
                   ) : (
-                    <video
+                    <LightboxVideo
                       src={currentImage.src}
                       poster={currentImage.poster}
-                      playsInline
-                      muted
-                      loop
-                      autoPlay
-                      controls
-                      className="max-w-full max-h-full object-contain rounded-md shadow-2xl"
                     />
                   )}
                 </motion.div>
@@ -241,6 +275,9 @@ export function LightboxModal() {
               <div className="flex items-center gap-2 overflow-x-auto max-w-full py-1 px-2 scrollbar-none">
                 {images.map((item, idx) => {
                   const isActive = idx === currentIndex;
+                  const isVideo = item.type === 'video';
+                  const thumbSrc = isVideo ? (item.poster || item.src) : item.src;
+
                   return (
                     <button
                       key={idx}
@@ -251,15 +288,29 @@ export function LightboxModal() {
                           ? 'border-white ring-1 ring-white/60 scale-105 opacity-100 shadow-md'
                           : 'border-white/10 opacity-35 hover:opacity-80 hover:border-white/30'
                       }`}
-                      aria-label={`Go to image ${idx + 1}`}
+                      aria-label={`Go to ${isVideo ? 'video' : 'image'} ${idx + 1}`}
                     >
-                      <Image
-                        src={item.src}
-                        alt={item.alt}
-                        fill
-                        unoptimized
-                        className="object-cover"
-                      />
+                      {isVideo && !item.poster ? (
+                        <video
+                          src={item.src}
+                          className="object-cover w-full h-full pointer-events-none"
+                          muted
+                          playsInline
+                        />
+                      ) : (
+                        <Image
+                          src={thumbSrc}
+                          alt={item.alt}
+                          fill
+                          unoptimized
+                          className="object-cover"
+                        />
+                      )}
+                      {isVideo && (
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/35 pointer-events-none">
+                          <Play className="w-3 h-3 text-white fill-white" />
+                        </div>
+                      )}
                     </button>
                   );
                 })}

@@ -71,19 +71,18 @@ export function getDefaultGridItems(): GridItemConfig[] {
       project: previousWork,
     },
 
-    // 5. Uber Dynamic Ride-Share (Academic)
+    // 5. The Food Atlas (Personal Project)
     {
-      id: 'uber-dynamic-carpooling',
+      id: 'food-atlas',
       type: 'project',
       candidateSizes: [
-        [3, 3],
+        [4, 3],
         [3, 2],
-        [2, 3],
       ],
       preferredArea: 'center',
       weight: 3,
       priority: 5,
-      project: academicProjects.find((p) => p.id === 'uber-dynamic-carpooling'),
+      project: personalProjects.find((p) => p.id === 'food-atlas'),
     },
 
     // 6. Perception of X Users (Academic Research)
@@ -218,9 +217,9 @@ export const CURATED_DEFAULT_LAYOUT: Array<{
   { id: 'hopr', col: 6, row: 1, colSpan: 4, rowSpan: 3 },
   { id: 'cardtree', col: 10, row: 2, colSpan: 3, rowSpan: 2 },
   { id: 'about', col: 2, row: 3, colSpan: 3, rowSpan: 2 },
-  { id: 'uber-dynamic-carpooling', col: 7, row: 4, colSpan: 3, rowSpan: 3 },
+  { id: 'food-atlas', col: 7, row: 4, colSpan: 4, rowSpan: 3 },
   { id: 'x-perception', col: 1, row: 5, colSpan: 3, rowSpan: 2 },
-  { id: 'procedural-audio', col: 10, row: 5, colSpan: 3, rowSpan: 2 },
+  { id: 'procedural-audio', col: 11, row: 5, colSpan: 2, rowSpan: 2 },
   { id: 'my-tags', col: 5, row: 6, colSpan: 2, rowSpan: 2 },
   { id: 'colophon', col: 1, row: 8, colSpan: 3, rowSpan: 1 },
   // All social media tiles locked in the right bottom corner (Rows 7-8, Cols 11-12):
@@ -282,7 +281,7 @@ export function generateGridLayout(options?: {
  * Curated 6-column modular grid for tablets and narrower desktops (768px - 1400px).
  * Preserves the Swiss poster aesthetic, element relationships, and negative space
  * while providing generous cell proportions for portrait and mid-size viewports.
- * Project ordering: Hopr (hero) -> X -> Cardtree -> Uber -> My Tags -> Procedural Audio.
+ * Project ordering: Hopr (hero) -> X -> Cardtree -> The Food Atlas -> My Tags -> Procedural Audio.
  */
 export const CURATED_TABLET_LAYOUT: Array<{
   id: string;
@@ -296,9 +295,9 @@ export const CURATED_TABLET_LAYOUT: Array<{
   { id: 'about', col: 5, row: 3, colSpan: 2, rowSpan: 3 },
   { id: 'x-perception', col: 1, row: 6, colSpan: 3, rowSpan: 2 },
   { id: 'cardtree', col: 4, row: 6, colSpan: 3, rowSpan: 2 },
-  { id: 'uber-dynamic-carpooling', col: 1, row: 8, colSpan: 3, rowSpan: 3 },
-  { id: 'my-tags', col: 4, row: 8, colSpan: 2, rowSpan: 2 },
-  { id: 'procedural-audio', col: 4, row: 10, colSpan: 3, rowSpan: 2 },
+  { id: 'food-atlas', col: 1, row: 8, colSpan: 4, rowSpan: 3 },
+  { id: 'my-tags', col: 5, row: 8, colSpan: 2, rowSpan: 2 },
+  { id: 'procedural-audio', col: 5, row: 10, colSpan: 2, rowSpan: 2 },
   { id: 'colophon', col: 1, row: 12, colSpan: 4, rowSpan: 2 },
   { id: 'social-email', col: 5, row: 12, colSpan: 1, rowSpan: 1 },
   { id: 'social-linkedin', col: 6, row: 12, colSpan: 1, rowSpan: 1 },
@@ -361,7 +360,7 @@ export const MOBILE_LAYOUT: Array<{
   { id: 'about', colSpan: 4 },
   { id: 'hopr', colSpan: 4 },
   { id: 'cardtree', colSpan: 4 },
-  { id: 'uber-dynamic-carpooling', colSpan: 4 },
+  { id: 'food-atlas', colSpan: 4 },
   { id: 'x-perception', colSpan: 4 },
   { id: 'my-tags', colSpan: 4 },
   { id: 'procedural-audio', colSpan: 4 },
